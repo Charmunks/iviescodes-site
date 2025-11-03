@@ -3,6 +3,7 @@ function powerOn() {
         document.querySelector(".content").style.visibility = "visible";
         document.querySelector(".about").style.visibility = "visible";
         document.querySelector(".projects").style.visibility = "visible";
+        document.querySelector(".power").style.visibility = "hidden";
         document.querySelector(".content").src = "main.html";
     } else {
         document.querySelector(".content").style.visibility = "hidden";
