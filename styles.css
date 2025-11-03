@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100vmin;
+    height: 100vmin;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url("assets/3ds.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transform-origin: center center;
+}
+
+@media (orientation: landscape) {
+    .container {
+        width: 80vh;
+        height: 80vh;
+    }
+}
+
+@media (orientation: portrait) {
+    .container {
+        width: 90vw;
+        height: 90vw;
+    }
+}
+
+/* Fine-tune for specific aspect ratios */
+@media (min-aspect-ratio: 16/10) {
+    .container {
+        width: 70vh;
+        height: 70vh;
+    }
+}
+
+@media (max-aspect-ratio: 3/4) {
+    .container {
+        width: 85vw;
+        height: 85vw;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .container {
+        width: 95vmin;
+        height: 95vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98vmin;
+        height: 98vmin;
+    }
+}
+
+.on {
+    position: absolute;
+    top: 78.5%;
+    left: 76.5%;
+    width: 2%;
+    height: 3%;
+    color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.about {
+    position: absolute;
+    top: 62%;
+    left: 43%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.projects {
+    position: absolute;
+    top: 67%;
+    left: 41%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+button {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(8px, 2.5vmin, 20px);
+    transition: all 0.2s ease;
+}
+
+.content {
+    position: absolute;
+    top: 19%;
+    left: 50.2%;
+    width: 50%;
+    height: 28%;
+    border: none;
+    overflow: hidden;
+    transform: translateX(-50%);
+}
+
+/* Ensure iframe content scales properly */
+.content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
